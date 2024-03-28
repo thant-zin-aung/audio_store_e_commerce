@@ -1,0 +1,70 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.main-wrapper {
+    width: 450px;
+    height: 600px;
+    /* border: 1px solid black; */
+    box-shadow: 1px 1px 8px 1px #CCCCCC;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 25px;
+    box-sizing: border-box;
+}
+.main-wrapper .confirm-logo-wrapper {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+}
+.main-wrapper .confirm-logo-wrapper .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+    background-color: black;
+    opacity: 0.2;
+    z-index: 0;
+}
+.main-wrapper .confirm-logo-wrapper i {
+    position: relative;
+    z-index: 2;
+    font-size: 150px;
+}
+.main-wrapper div {
+    text-align: center;
+}
+
+.main-wrapper .order-confirm {
+    font-size: 30px;
+    font-weight: bold;
+}
+.main-wrapper .order-confirm span {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.main-wrapper .info-msg {
+    font-size: 14px;
+    opacity: 0.8;
+}
+.main-wrapper .back-to-home-button,
+.main-wrapper .back-to-home-button button {
+    width: 100%;
+    height: 45px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}

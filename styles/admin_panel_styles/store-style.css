@@ -1,0 +1,312 @@
+.top-layer-wrapper {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.top-layer-wrapper > div {
+    width: 49.5%;
+    /* height: 160px; */
+    /* background-color: red; */
+    color: black;
+    border-radius: 10px;
+    border: 1px solid #272727;
+}
+.top-layer-wrapper > div .info {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.top-layer-wrapper > div .title-wrapper {
+    font-size: 15px;
+    font-weight: bold;
+}
+.top-layer-wrapper > div .total-amount {
+    font-size: 30px;
+    font-weight: bold;
+}
+.top-layer-wrapper > div .sub-text-wrapper {
+    font-size: 13px;
+    /* text-decoration: underline; */
+}
+.top-layer-wrapper > div .add-button {
+    width: 150px;
+    height: 40px;
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    /* border: 1px solid white; */
+    transition: all 0.3s;
+}
+.top-layer-wrapper > div table {
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    width: 100%;
+    max-height: 500px;
+    overflow-y: scroll;
+    font-size: 14px;
+}
+.top-layer-wrapper > div table th {
+    height: 60px;
+    min-height: 60px;
+}
+.top-layer-wrapper > div table td {
+    height: 60px;
+    min-height: 60px;
+}
+.top-layer-wrapper > div table button {
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    border: none;
+    margin: 0 5px;
+    border-radius: 35px;
+    /* font-weight: bold; */
+    background-color: transparent;
+    transition: all 0.3s;
+}
+.top-layer-wrapper > div table img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.top-layer-wrapper > div table .update-button {
+    color: #20A4F2;
+    border: 1px solid #20A4F2;
+}
+.top-layer-wrapper > div table .update-button:hover {
+    color: white;
+    background-color: #20A4F2;
+}
+.top-layer-wrapper > div table .delete-button {
+    color: red;
+    border: 1px solid red;
+}
+.top-layer-wrapper > div table .delete-button:hover {
+    color: white;
+    background-color: red;
+}
+.category-add-button {
+    box-shadow: 1px 1px 8px 1px #00AF8C;
+}
+.brand-add-button {
+    box-shadow: 1px 1px 8px 1px #C8AD4E;
+}
+.product-add-button {
+    box-shadow: 1px 1px 8px 1px #BC7FC6;
+}
+.discount-add-button {
+    box-shadow: 1px 1px 8px 1px #2586BF;
+}
+.top-layer-wrapper > div .category-add-button:hover {
+    box-shadow: 1px 1px 8px 1px #00604D;
+}
+.top-layer-wrapper > div .brand-add-button:hover {
+    box-shadow: 1px 1px 8px 1px #8C7938;
+}
+.top-layer-wrapper > div .product-add-button:hover {
+    box-shadow: 1px 1px 8px 1px #875A8E;
+}
+.top-layer-wrapper > div .discount-add-button:hover {
+    box-shadow: 1px 1px 8px 1px #1C6088;
+}
+
+.top-layer-wrapper > div .add-button .text-wrapper {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50px;
+}
+.top-layer-wrapper > div .add-button i {
+    font-size: 20px;
+    margin-left: 6px;
+    color: white;
+}
+.top-layer-wrapper > div .logo {
+    width: 90px;
+    height: 90px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 30px;
+    right: 10%;
+}
+.top-layer-wrapper > div .category-logo {
+    background-image: url('../../images/admin_panel_images/category-icon.png');
+}
+.top-layer-wrapper > div .brand-logo {
+    background-image: url('../../images/admin_panel_images/brand-icon.png');
+}
+.top-layer-wrapper > div .down-arrow {
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 20px);
+}
+
+.delete-form {
+    display: inline-block !important;
+}
+.top-layer-wrapper .category-wrapper .info {
+    background-color: #0CF5C8;
+}
+.top-layer-wrapper .brand-wrapper .info {
+    background-color: #FAD85D;
+}
+
+
+.middle-layer-wrapper {
+    margin-top: 15px;
+    width: 100%;
+    display: block;
+}
+.middle-layer-wrapper .product-wrapper {
+    width: 100%;
+}
+.middle-layer-wrapper .product-wrapper .info {
+    background-color: #F2A0FF;
+}
+.top-layer-wrapper > div .product-logo {
+    background-image: url('../../images/admin_panel_images/product-icon.png');
+    right: 5%;
+}
+.middle-layer-wrapper .discount-wrapper {
+    width: 100%;
+    margin-top: 15px;
+}
+.middle-layer-wrapper .discount-wrapper .info{
+    background-color: #2BB2FF;
+}
+.top-layer-wrapper > div .discount-logo {
+    background-image: url('../../images/admin_panel_images/discount-icon.png');
+    right: 5%;
+}
+
+
+
+
+.overlay-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    display: none;
+}
+.overlay-wrapper .form-overlay {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    position: absolute;
+    z-index: 0;
+}
+.form-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-design {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    z-index: 1;
+    background-color: #1A1A1A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+.form-design .title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.form-design input,select,option {
+    background-color: transparent;
+    color: white;
+    border: solid white;
+    border-width: 0 0 1px 0;
+    outline: none;
+    width: 80%;
+    height: 50px;
+    margin: 10px 0;
+}
+.form-design input:focus {
+    border-width: 0 0 3px 0;
+}
+.form-design .button {
+    background-color: #C74B50;
+    border: none;
+    margin-bottom: 2px !important;
+}
+.form-design .cancel-button {
+    background-color: #9E4784;
+}
+
+.category-form-design,
+.brand-form-design,
+.product-form-design,
+.discount-form-design,
+.category-update-form-design,
+.brand-update-form-design,
+.product-update-form-design,
+.discount-update-form-design {
+    height: 450px;
+    display: none;
+}
+
+.product-form-design {
+    width: 600px;
+    height: 95%;
+}
+.product-form-design .title {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.product-form-design input,select {
+    height: 35px;
+}
+.product-form-design option,
+.discount-form-design option {
+    background-color: #1A1A1A;
+}
+.discount-form-design {
+    height: 700px;
+}
+.update-form-design input[type=submit] {
+    margin-top: 30px;
+}
+.category-update-form-design,
+.brand-update-form-design {
+    height: 500px;
+}
+.product-update-form-design {
+    height: 700px;
+}
+.discount-update-form-design {
+    height: 700px;
+}

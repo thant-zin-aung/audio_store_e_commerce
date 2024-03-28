@@ -1,0 +1,868 @@
+*,html {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.nav-bar-wrapper {
+    width: 100%;
+    height: 90px;
+    background-color: transparent;
+    box-shadow: 1px 1px 8px 1px #DADADA;
+    position: absolute;
+    top: 0;
+    z-index: 10000;
+    color: white;
+    transition: all 0.5s;
+    position: fixed;
+    top: 0;
+}
+.nav-bar {
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.nav-bar .left-wrapper {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav-bar .left-wrapper i {
+    margin-right: 10px;
+    font-size: 40px;
+}
+.nav-bar .left-wrapper .top-wrapper {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+.nav-bar .left-wrapper .bottom-wrapper {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    /* font-weight: bold; */
+}
+
+
+.nav-bar .middle-wrapper a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    margin-right: 60px;
+    border: solid transparent;
+    border-width: 3px;
+    transition: all 0.4s;
+}
+.nav-bar .middle-wrapper a:last-child {
+    margin-right: 0;
+}
+.nav-bar .middle-wrapper a:hover {
+    /* color: red !important; */
+    border-color: transparent transparent black transparent;
+}
+
+.nav-bar .right-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-bar .right-wrapper > div {
+    margin-right: 30px;
+    cursor: pointer;
+}
+.nav-bar .right-wrapper .search-box-wrapper {
+    width: 300px;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    /* border: 2px solid #EAEAEA; */
+}
+.nav-bar .right-wrapper .search-box-wrapper input[type=text] {
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    /* background-color: #ECECEC; */
+    background-color: white;
+    padding: 0 20px;
+}
+.nav-bar .right-wrapper .search-box-wrapper i {
+    font-size: 17px;
+    position: absolute;
+    color: black;
+    right: 20px;
+    top: 10px;
+}
+
+.nav-bar .right-wrapper .account-wrapper {
+    text-align: center;  
+    font-size: 17px;
+    font-weight: bold;
+    border: solid transparent;
+    border-width: 3px;
+    transition: all 0.4s;
+}
+.nav-bar .right-wrapper .account-wrapper a {
+    color: inherit;
+    text-decoration: none;
+}
+.nav-bar .right-wrapper .account-wrapper:hover {
+    /* color: red !important; */
+    border-color: transparent transparent black transparent;
+}
+.nav-bar .right-wrapper .account-wrapper i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.nav-bar .right-wrapper .cart-wrapper {
+    width: 30px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.nav-bar .right-wrapper .cart-wrapper i {
+    font-size: 20px;
+}
+.nav-bar .right-wrapper .cart-wrapper .badge {
+    width: 17px;
+    height: 17px;
+    border-radius: 17px;
+    background-color: red;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 5px;
+    left: 20px;
+    font-size: 9px;
+    /* display: none; */
+}
+.change-nav-background {
+    background-color: white;
+}
+.change-nav-text {
+    color: black !important;
+}
+
+
+/* Slide show wrapper section */
+.splide{
+    width: 100%;
+    height: 95vh;
+    position: relative;
+    /* margin: 30px auto; */
+}
+.splide .splide__track {
+    height: 100%;
+}
+.splide .splide__progress__bar {
+    /* background: #E7347D; */
+    background: grey;
+}
+
+.splide .item {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.splide .item .slide-show-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 1; 
+}
+.splide .item .slide-show-detail {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    z-index: 2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.splide .item .slide-show-detail .title {
+    font-size: 60px;
+    font-weight: bold;
+    transform: translateY(70px);
+    opacity: 0;
+    transition: all 0.7s;
+}
+.splide .item .slide-show-detail .description {
+    font-size: 14px;
+    width: 55%;
+    text-align: center;
+    margin: 30px 0;
+    transform: translateY(70px);
+    opacity: 0;
+    transition: all 1.4s;
+}
+.splide .item .slide-show-detail .explore-button-form {
+    width: 250px;
+    height: 43px;
+    transform: translateY(70px);
+    opacity: 0;
+    transition: all 2.1s;
+}
+.unhide-info {
+    transform: translateY(0px) !important;
+    opacity: 1 !important;
+}
+.splide .item .slide-show-detail .explore-button-form .explore-button {
+    font-size: 15px;
+    /* font-weight: bold; */
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    border: none;
+    /* background-color: #E7347D;
+    color: white; */
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+
+
+    /* background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 50px; */
+}
+
+.splide .brand-logo-wrapper {
+    width: 80%;
+    height: 100px;
+    background-color: white;
+    box-shadow: 1px 1px 8px 1px #DADADA;
+    display: flex;
+    position: absolute;
+    bottom: -50px;
+    left: calc(100% - 90%);
+    
+}
+.splide .brand-logo-wrapper .item {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.splide .brand-logo-wrapper .item img {
+    width: 83px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Route intro section styles */
+#route-intro {
+    width: 1100px;
+    height: 550px;
+    margin: 120px auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+#route-intro div {
+    background-size: cover;
+    background-position: center;
+}
+#route-intro .left-wrapper {
+    width: calc(70% - 5px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#route-intro .right-wrapper {
+    width: calc(30% - 5px);
+    height: 100%;
+    background-image: url('../images/route_intro_images/speaker.jpg');
+    position: relative;
+    transform: translateX(300px);
+    opacity: 0;
+    transition: all 1s;
+}
+#route-intro .left-wrapper .top-wrapper {
+    width: 100%;
+    height: calc(50% - 5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#route-intro .left-wrapper .bottom-wrapper {
+    width: 100%;
+    height: calc(50% - 5px);
+    background-image: url('../images/route_intro_images/soundbar.jpg');
+    position: relative;
+    transform: translateX(-300px);
+    opacity: 0;
+    transition: all 1s;
+}
+#route-intro .left-wrapper .top-wrapper .left {
+    width: calc(50% - 5px);
+    height: 100%;
+    background-image: url('../images/route_intro_images/girl_headphone.PNG');
+    position: relative;
+    transform: translateX(-600px);
+    opacity: 0;
+    transition: all 1s;
+}
+#route-intro .left-wrapper .top-wrapper .right {
+    width: calc(50% - 5px);
+    height: 100%;
+    background-image: url('../images/route_intro_images/earphone.jpg');
+    position: relative;
+    transform: translateX(-300px);
+    opacity: 0;
+    transition: all 1s;
+}
+#route-intro .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: 0.5;
+    z-index: 1;
+}
+#route-intro .detail-wrapper {
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+    position: absolute;
+    z-index: 2;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+#route-intro .detail-wrapper .sub-title {
+    font-size: 15px;
+    text-transform: lowercase;
+    opacity: 0.8;
+}
+#route-intro .detail-wrapper .title {
+    font-size: 23px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 5px 0 20px 0;
+}
+#route-intro .detail-wrapper form {
+    width: 130px;
+    height: 37px;
+}
+#route-intro .detail-wrapper form button {
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    transition: all 0.3s;
+}
+#route-intro .sizable-div,.sizable-div-5px {
+    transition: all 0.5s;
+}
+#route-intro .sizable-div:hover {
+    transform: translateY(-10px) !important;
+}
+#route-intro .sizable-div-5px:hover {
+    transform: translateY(-5px) !important;
+}
+#route-intro .detail-wrapper form button:hover {
+    background-color: white;
+    color: black;
+}
+
+.unhide-route-intro-wrappers {
+    transform: translateX(0px) !important;
+    opacity: 1 !important;
+}
+
+
+/* Discount style section... */
+#discount {
+    width: 80%;
+    height: 350px;
+    background-color: black;
+    margin: 20px auto;
+    padding: 10px;
+}
+#discount .discount-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+#discount .discount-wrapper .left-wrapper,
+#discount .discount-wrapper .right-wrapper {
+    width: 50%;
+    height: 100%;
+    border: 1px dashed white;
+    border-width: 1px 1px 1px 1px;
+}
+#discount .discount-wrapper .left-wrapper {
+    color: white;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#discount .discount-wrapper .right-wrapper {
+    color: white;
+}
+.discount-wrapper .left-wrapper .title-1-wrapper {
+    font-size: 18px;
+    font-family: 'Merienda', cursive;
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+}
+.discount-wrapper .left-wrapper .title-2-wrapper {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: solid white;
+    border-width: 3px 0;
+    margin: 20px 0;
+}
+.discount-wrapper .left-wrapper .detail-wrapper {
+    font-size: 12px;
+    text-align: center;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#discount .discount-wrapper .right-wrapper .top-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+#discount .discount-wrapper .right-wrapper .discount-percent {
+    font-family: 'Merienda', cursive;
+    font-size: 150px;
+    margin-right: 30px;
+}
+#discount .discount-wrapper .right-wrapper .discount-detail-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#discount .discount-wrapper .right-wrapper .discount-detail-wrapper .detail {
+    font-size: 13px;
+    margin: 10px 0;
+}
+#discount .discount-wrapper .right-wrapper .discount-detail-wrapper .detail b {
+    font-size: 15px;
+}
+
+#discount .discount-wrapper .right-wrapper hr {
+    margin: 10px auto;
+    width: 85%;
+}
+
+#discount .discount-wrapper .right-wrapper .bottom-wrapper {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#discount .discount-wrapper .right-wrapper .bottom-wrapper button {
+    background-color: transparent;
+    border: none;
+    box-shadow: 1px 1px 8px 1px #DADADA;
+    color: white;
+    border-radius: 5px;
+    width: 85%;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+/* Most order products section styles */
+#most-order-products {
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+}
+#most-order-products .title {
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 60px 0 30px 0;
+    display: flex;
+    align-items: center;
+}
+#most-order-products .title .side-bar {
+    height: 100%;
+    width: 7px;
+    background-color: black;
+    margin-right: 10px;
+}
+#most-order-products .title .sub-side-bar {
+    width: 3px;
+    margin: 0 10px;
+}
+#most-order-products .title span {
+    font-size: 13px;
+    font-weight: normal;
+}
+#most-order-products .top-wrapper,
+#most-order-products .bottom-wrapper {
+    width: 100%;
+    height: 380px;
+    padding: 5px;
+    box-sizing: border-box;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; */
+    transition: all 0.4s;
+}
+
+
+#most-order-products .item {
+    width: 300px;
+    height: 100%;
+    /* background-color: #F8F8F8; */
+    /* border: 1px solid #E5E5E5; */
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px 1px #DADADA;
+    overflow: hidden;
+}
+
+#most-order-products .item .product-image {
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+}
+#most-order-products .item .product-detail {
+    width: 100%;
+    height: 40%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#most-order-products .item .product-detail .name {
+    font-size: 17px;
+    /* font-weight: bold; */
+}
+#most-order-products .item .product-detail .short-intro {
+    font-size: 11px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+#most-order-products .item .product-detail .price-review-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#most-order-products .item .product-detail .price {
+    font-size: 17px;
+    font-weight: bold;
+}
+#most-order-products .item .product-detail .price span {
+    font-size: 14px;
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+#most-order-products .item .product-detail .reviews {
+    font-size: 13px;
+    color: #ffbd00;
+}
+#most-order-products .item .product-detail .reviews .total-reviewers {
+    color: black;
+}
+#most-order-products .item .product-detail .button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#most-order-products .item .product-detail  button {
+    width: 100%;
+    height: 43px;
+    min-height: 43px;
+    border-radius: 1px;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+#most-order-products .item .product-detail .buy-now {
+    /* background-color: #3D3C42; */
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+}
+#most-order-products .item .product-detail .add-to-cart {
+    /* background-color: #FF0063; */
+    /* background-color: transparent;
+    color: black;
+    border: 1px solid black; */
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+#most-order-products .item .product-detail .add-to-cart:hover {
+    background-color: black;
+    color: white;
+}
+#most-order-products .item .product-detail .add-to-cart i {
+    margin-right: 4px;
+}
+
+
+/* Our service style section....................................................................... */
+#our-service {
+    width: 80%;
+    margin: 70px auto;
+}
+
+#our-service .title-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+#our-service .title-wrapper .title {
+    font-size: 1.8rem;
+}
+#our-service .title-wrapper .sub-title {
+    font-size: 0.8rem;
+}
+
+#our-service .service-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#our-service .service-wrapper .service-detail {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#our-service .service-wrapper .service-detail .icon {
+    text-align: center;
+    font-size: 100px;
+}
+#our-service .service-wrapper .service-detail .title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+#our-service .service-wrapper .service-detail .description {
+    width: 85%;
+    text-align: center;
+    font-size: 13px;
+}
+#our-service .service-wrapper .service-detail .button {
+    width: 180px;
+    height: 40px;
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+#our-service .service-wrapper .service-detail .button:hover {
+    background-color: black;
+    color: white;
+}
+
+
+/* Website detail section styles............................................................. */
+#website-detail {
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    margin-top: 100px;
+    padding: 50px 100px;
+    box-sizing: border-box;
+}
+#website-detail .top-wrapper {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+#website-detail .top-wrapper .left-wrapper {
+    width: 75%;
+    height: 100%;
+    color: white;
+    border: dashed white;
+    border-width: 0 1px 0 0;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+    box-sizing: border-box;
+}
+#website-detail .top-wrapper .left-wrapper .title {
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+#website-detail .top-wrapper .left-wrapper .detail-text {
+    font-size: 14px;
+    margin: 15px 0;
+    opacity: 0.8;
+    
+}
+
+#website-detail .top-wrapper .right-wrapper {
+    width: 25%;
+    height: 100%;
+    color: white;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+#website-detail .top-wrapper .right-wrapper .input-field {
+    display: flex;
+    width: 100%;
+    height: 33px;
+    margin: 15px 0;
+}
+#website-detail .top-wrapper .right-wrapper input {
+    width: 80%;
+    border: none;
+    padding-left: 10px;
+    font-size: 14px;
+}
+#website-detail .top-wrapper .right-wrapper input:focus {
+    outline: none;
+}
+#website-detail .top-wrapper .right-wrapper button {
+    width: 25%;
+    border: none;
+    font-size: 14px;
+    background-color: #BDBDBD;
+}
+#website-detail .top-wrapper .right-wrapper .title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#website-detail .top-wrapper .right-wrapper .description {
+    font-size: 13px;
+    width: 100%;
+    opacity: 0.8;
+}
+#website-detail .top-wrapper .right-wrapper .social-wrapper {
+    margin-top: 20px;
+}
+#website-detail .top-wrapper .right-wrapper .social-wrapper i {
+    font-size: 25px;
+    margin: 0 10px;
+}
+
+#website-detail .bottom-wrapper {
+    margin-top: 30px;
+    width: 100%;
+    color: white;
+}
+
+#website-detail .bottom-wrapper .store-title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#website-detail .bottom-wrapper .address,
+#website-detail .bottom-wrapper .copyright {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+
+/* media queries responsive styles............... */
+@media only screen and (max-width: 1920px) {
+    #most-order-products .top-wrapper,
+    #most-order-products .bottom-wrapper {
+        height: 340px;
+    }
+
+    #most-order-products .item .product-detail {
+        padding: 7px;
+    }
+
+    #most-order-products .item .product-detail .name {
+        font-size: 15px;
+    }
+    #most-order-products .item .product-detail .short-intro {
+        font-size: 10px;
+    }
+    #most-order-products .item .product-detail .price {
+        font-size: 14px;
+    }
+    #most-order-products .item .product-detail .reviews {
+        font-size: 11px;
+    }
+    #most-order-products .item .product-detail .reviews i {
+        font-size: 8px;
+    }
+    #most-order-products .item .product-detail .button-wrapper button {
+        height: 35px;
+    }
+}
+
+
+@media only screen and (max-width: 1920px) {
+    #route-intro {
+        width: 65%;
+        height: 600px;
+    }
+    #route-intro .detail-wrapper .sub-title {
+        font-size: 13px;
+    }
+    #route-intro .detail-wrapper .title {
+        font-size: 19px;
+    }
+    #route-intro .detail-wrapper form {
+        width: 110px;
+        height: 35px;
+    }
+}

@@ -1,0 +1,237 @@
+.nav-bar-wrapper {
+    /* position: relative;  */
+    background-color: white;
+}
+.nav-bar {
+    color: black;
+}
+.nav-bar .middle-wrapper a {
+    color: black;
+}
+.nav-bar .search-box-wrapper input {
+    background-color: #ECECEC !important;
+}
+
+
+.product-filter-list-wrapper {
+    width: 95%;
+    margin: 110px auto;
+    display: flex;
+    justify-content: center;
+}
+.product-filter-list-wrapper .filter-wrapper {
+    width: 340px;
+    height: auto;
+    padding: 20px 30px;
+    border: 1px solid #ECECEC;
+    border-width: 0 1px 0 0;
+    margin-right: 30px;
+}
+.product-filter-list-wrapper .filter-wrapper hr {
+    margin: 15px 0;
+}
+
+.product-filter-list-wrapper .product-list-wrapper {
+    padding: 20px 20px;
+    /* border: 1px solid #ECECEC; */
+    width: 1300px;
+}
+.product-filter-list-wrapper .product-list-wrapper .item-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.product-filter-list-wrapper .filter-wrapper .filter-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.product-filter-list-wrapper .product-list-wrapper .title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-filter-list-wrapper .filter-wrapper .search-title {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.product-filter-list-wrapper .filter-wrapper .search-wrapper input {
+    margin-bottom: 10px;
+}
+.product-filter-list-wrapper .filter-wrapper .search-wrapper input[type=checkbox] {
+    accent-color: black;
+}
+.product-filter-list-wrapper .filter-wrapper .search-wrapper label {
+    font-size: 14px;
+}
+.product-filter-list-wrapper .filter-wrapper .search-wrapper .range-wrapper {
+    width: 100%;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+.product-filter-list-wrapper .filter-wrapper .search-wrapper .range-wrapper .gap-dash {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.product-filter-list-wrapper .filter-wrapper .search-wrapper .range-wrapper input[type=number] {
+    width: 90px;
+    height: 100%;
+    padding-left: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ECECEC;
+    margin-bottom: 0;
+}
+.product-filter-list-wrapper .filter-wrapper .search-wrapper .range-wrapper input[type=number]:focus {
+    outline: none;
+}
+.product-filter-list-wrapper .filter-wrapper input[type=submit] {
+    width: 100%;
+    height: 35px;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-top: 25px;
+}
+
+.product-list-wrapper .item {
+    width: 300px;
+    height: 430px;
+    /* background-color: #F8F8F8; */
+    /* border: 1px solid #ECECEC; */
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px 1px #DADADA;
+    overflow: hidden;
+    margin: 10px 0;
+    /* margin-right: auto; */
+}
+
+.product-list-wrapper .item .product-image {
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+}
+.product-list-wrapper .item .product-detail {
+    width: 100%;
+    height: 40%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.product-list-wrapper .item .product-detail .name {
+    font-size: 17px;
+    /* font-weight: bold; */
+    overflow: hidden;
+    max-width: 100%;
+}
+.product-list-wrapper .item .product-detail .short-intro {
+    font-size: 11px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+.product-list-wrapper .item .product-detail .price-review-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-list-wrapper .item .product-detail .price {
+    font-size: 17px;
+    font-weight: bold;
+}
+.product-list-wrapper .item .product-detail .price span {
+    font-size: 14px;
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+.product-list-wrapper .item .product-detail .reviews {
+    font-size: 13px;
+    color: #ffbd00;
+}
+.product-list-wrapper .item .product-detail .reviews .total-reviewers {
+    color: black;
+}
+.product-list-wrapper .item .product-detail .button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-list-wrapper .item .product-detail button {
+    width: 100%;
+    height: 43px;
+    border-radius: 1px;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+.product-list-wrapper .item .product-detail .buy-now {
+    /* background-color: #3D3C42; */
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+}
+.product-list-wrapper .item .product-detail .add-to-cart {
+    /* background-color: #FF0063; */
+    /* background-color: transparent;
+    color: black;
+    border: 1px solid black; */
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+.product-list-wrapper .item .product-detail .add-to-cart:hover {
+    background-color: black;
+    color: white;
+}
+.product-list-wrapper .item .product-detail .add-to-cart i {
+    margin-right: 4px;
+}
+
+
+
+
+
+/* This is responsive design.......................................................... */
+
+@media only screen and (max-width: 1920px) {
+    .product-list-wrapper .item {
+        width: 250px;
+        height: 340px;
+    }
+    .product-list-wrapper .top-wrapper,
+    .product-list-wrapper .bottom-wrapper {
+        height: 340px;
+    }
+
+    .product-list-wrapper .item .product-detail {
+        padding: 7px;
+    }
+
+    .product-list-wrapper .item .product-detail .name {
+        font-size: 15px;
+    }
+    .product-list-wrapper .item .product-detail .short-intro {
+        font-size: 10px;
+    }
+    .product-list-wrapper .item .product-detail .price {
+        font-size: 14px;
+    }
+    .product-list-wrapper .item .product-detail .reviews {
+        font-size: 11px;
+    }
+    .product-list-wrapper .item .product-detail .reviews i {
+        font-size: 8px;
+    }
+    .product-list-wrapper .item .product-detail button {
+        height: 35px;
+    }
+}

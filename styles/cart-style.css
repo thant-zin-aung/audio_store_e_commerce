@@ -1,0 +1,224 @@
+body {
+    box-sizing: border-box;
+}
+.main-title {
+    width: 80%;
+    margin: 30px auto;
+    margin-top: 130px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.first-hr {
+    width: 80%;
+    margin: 0 auto;
+}
+.main-wrapper {
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+}
+.main-wrapper .left-wrapper {
+    width: 80%;
+    padding: 0 10px;
+}
+.main-wrapper .right-wrapper {
+    width: 20%;
+    padding: 0 10px;
+}
+.main-wrapper table {
+    width: 100%;
+    border-color: #E5E5E5;
+}
+.main-wrapper table th {
+    font-weight: 500;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.main-wrapper table th:first-child {
+    text-align: left;
+}
+.main-wrapper table .header,
+.main-wrapper table td {
+    border: 1px solid #E5E5E5;
+    border-width: 0 0 1px 0;
+}
+.main-wrapper table td {
+    padding: 10px;
+    box-sizing: border-box;
+}
+.main-wrapper table tr td {
+    text-align: center;
+}
+.main-wrapper table tr td:first-child {
+    text-align: left;
+}
+
+table tr .product-wrapper {
+    width: auto;
+    height: 150px;
+    display: flex;
+}
+table tr .quantity-wrapper form input[type=submit] {
+    border: none;
+    background-color: transparent;
+    font-size: 12px;
+}
+table tr .quantity-wrapper form input[type=submit]:hover {
+    color: orange;
+}
+table tr .product-wrapper .image-wrapper {
+    width: 150px;
+    height: 100%;
+}
+table tr .product-wrapper .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+table tr .product-wrapper .product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+    width: auto;
+}
+table tr .product-wrapper .product-details .brand-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+table tr .product-wrapper .product-details .product-name {
+    font-size: 16px;
+    margin-top: 10px;
+}
+table tr .product-wrapper .product-details .category-name {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* Right wrapper style */
+
+/* Order summary wrapper style */
+
+.main-wrapper .right-wrapper .order-summary-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E5E5E5;
+    padding: 10px;
+}
+.main-wrapper .right-wrapper .order-summary-wrapper .title{
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.main-wrapper .right-wrapper .order-summary-wrapper .subtotal-wrapper,
+.main-wrapper .right-wrapper .order-summary-wrapper .shipping-wrapper,
+.main-wrapper .right-wrapper .order-summary-wrapper .total-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+.main-wrapper .right-wrapper .order-summary-wrapper .text,.price {
+    font-size: 14px;
+}
+.main-wrapper .right-wrapper .order-summary-wrapper .total-wrapper .text,
+.main-wrapper .right-wrapper .order-summary-wrapper .total-wrapper .price {
+    font-size: 16px;
+    font-weight: bold;
+}
+.main-wrapper .right-wrapper .order-summary-wrapper .total-wrapper .price {
+    font-size: 18px;
+    font-style: italic;
+}
+.main-wrapper .right-wrapper .order-summary-wrapper button {
+    font-size: 14px;
+    border: none;
+    height: 45px;
+    margin-top: 10px;
+    font-weight: bold;
+    background: linear-gradient(to bottom right, #F0BF0B , #EEB250);
+    font-weight: 500;
+}
+
+/* Shipping address wrapper style */
+.right-wrapper .shipping-address-wrapper {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E5E5E5;
+    padding: 10px;
+}
+.right-wrapper .shipping-address-wrapper .title {
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.right-wrapper .shipping-address-wrapper .address-wrapper {
+    width: 100%;
+    font-size: 13px;
+    text-align: left;
+    cursor: pointer;
+    overflow-y: hidden;
+    margin-top: 10px;
+}
+.right-wrapper .shipping-address-wrapper .address-wrapper .label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+.right-wrapper .shipping-address-wrapper .address-wrapper .address {
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #E5E5E5;
+}
+.select-address{
+    border-color: orange !important;
+}
+
+.right-wrapper .shipping-address-wrapper form {
+    width: 100%;
+}
+.right-wrapper .shipping-address-wrapper form textarea {
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+    font-size: 13px;
+    border: 1px solid #E5E5E5;
+    margin-top: 20px;
+}
+.right-wrapper .shipping-address-wrapper form textarea:focus {
+    outline: none;
+}
+.right-wrapper .shipping-address-wrapper form input[type=submit] {
+    font-size: 14px;
+    width: 100%;
+    border: none;
+    height: 45px;
+    margin-top: 10px;
+    font-weight: bold;
+    background: linear-gradient(to bottom right, #F0BF0B , #EEB250);
+    font-weight: 500;
+}
+
+/* Media query screen responsive styles... */
+@media only screen and (max-width: 1920px) {
+    .main-title,.first-hr {
+        width: 95%;
+    }
+    .main-wrapper {
+        width: 95%;
+    }
+    .main-wrapper .left-wrapper {
+        width: 75%;
+        padding: 0 10px;
+    }
+    .main-wrapper .right-wrapper {
+        width: 25%;
+        padding: 0 10px;
+    }
+}
